@@ -12,16 +12,38 @@ export class PokedexService {
 
   constructor(private http: HttpClient) { }
 
+  // getPokemon(offset: number, limit: number): Observable<any> {
+  //   return this.http.get<any>(`${this.baseUrl}?offset=${offset}&limit=${limit}`)
+  //     .pipe(
+  //       map((response: any) => {
+  //         console.log(response)
+  //         return response.results.map((item: any, idx: number) => {
+  //           const id: number = idx + offset + 1;
+  //           return {
+  //             name: item.name,
+  //             sprite: `${this.baseSpriteUrl}${id}.png`,
+  //             id: id
+  //           }
+  //         });
+  //       })
+  //     );
+  // }
+
   getPokemon(offset: number, limit: number): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}?offset=${offset}&limit=${limit}`)
+    return this.http.get<any>(`${this.baseUrl}?limit=100`)
       .pipe(
         map((response: any) => {
+          
           return response.results.map((item: any, idx: number) => {
-            const id: number = idx + offset + 1;
+            
+            const idString: number = item.url.split('/')[6];
+            const id: number = +idString
+           
             return {
               name: item.name,
-              sprite: `${this.baseSpriteUrl}${id}.png`,
-              id: id
+              url: item.url,
+              id: id,
+              sprite: `${this.baseSpriteUrl}${id}.png`
             }
           });
         })

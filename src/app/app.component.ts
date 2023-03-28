@@ -28,7 +28,7 @@ loadMore() {
   this.pokedexService.getPokemon(this.pokemon.length, 9)
     .subscribe(
       (pokemon: any[]) => {
-        console.log(pokemon);
+        console.log('from app.component',pokemon);
         pokemon = pokemon.map(p => {
           p.imageLoaded = false;
           return p;
