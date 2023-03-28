@@ -49,4 +49,23 @@ export class PokedexService {
         })
       );
   }
+
+  getPokemonSpecs(id: number): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}${id}`)
+      .pipe(
+        map((response: any) => {
+          return {
+            id: response.id,
+            name: response.name,
+            height: response.height,
+            weight: response.weight,
+            abilities: response.abilities,
+            types: response.types,
+            stats: response.stats,
+            sprites: response.sprites
+            
+          }
+        })
+      );
+  }
 }

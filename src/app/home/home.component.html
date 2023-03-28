@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+<div *ngFor="let p of pokemon" class="box">
+  <h2>
+    <a [routerLink]="['/pokemon', p.id]">{{p.name}}</a></h2>
+  <img src="{{p.sprite}}" />
+  
+</div>
