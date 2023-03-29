@@ -63,4 +63,8 @@ export class PokemansComponent {
   logSpecs(p: any) {
     console.log(p);
   }
+
+
+
+  //same critiques from the home component
 }
