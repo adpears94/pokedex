@@ -1,0 +1,31 @@
+.name {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid black;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+.blue {
+    color: blue;
+    font-size: 200%;
+    
+}
+.underline {
+    text-decoration: underline;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-items: center
+}

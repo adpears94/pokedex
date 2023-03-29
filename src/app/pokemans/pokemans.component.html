@@ -1,15 +1,27 @@
+<div *ngFor="let p of pokemonSpecs">
+  <a class="name">
+    <h1>{{ p.name }}</h1>
+  </a>
+  <a class="name blue">
+    <div>id: {{ p.id }}</div>
+    <div>height: {{ p.height }}'</div>
+    <div>weight :{{ p.weight }} lbs</div>
+  </a>
+  <div class="container">
+    <a class="box">
+      <a class="underline">Abilities:</a>
+      <div *ngFor="let a of p.abilities">
+        <div>{{ a }}</div>
+      </div>
+    </a>
+    <a class="box">
+      <a class="underline">Stats:</a>
+      <div *ngFor="let s of p.stats">
+        <div>{{ s.name }}: {{ s.base_stat }}</div>
+      </div>
+    </a>
+  </div>
 
-    <div *ngFor="let p of pokemonSpecs">
-        <h1>{{p.name}}</h1>
-        <div>{{p.id}}</div>
-        <div>{{p.weight}} lbs</div>
-        <div *ngFor="let a of p.abilities">
-            <div>{{a}}</div>
-
-        </div>
-        <img src="{{p.sprites}}" />
-        <button (click)="
-        logSpecs(p)"></button>
-        
-    </div>
-
+  <img src="{{ p.sprites }}" />
+  <button (click)="logSpecs(p)"></button>
+</div>
