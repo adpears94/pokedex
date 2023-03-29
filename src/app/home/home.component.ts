@@ -18,6 +18,7 @@ export class HomeComponent {
 
 ngOnInit() {
   this.loadMore()
+  console.log(this.pokemon)
 }
 loadMore() {
   this.isLoading = true;
@@ -32,6 +33,7 @@ loadMore() {
         console.log('from app.component',pokemon);
         pokemon = pokemon.map(p => {
           p.imageLoaded = false;
+          console.log(p)
           return p;
         });
         

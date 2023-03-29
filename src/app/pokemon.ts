@@ -5,11 +5,12 @@ export class Pokemon {
 }
 
 export class PokemonSpecs {
-    id: number = 0;
-    name: string = '';
-    height: number = 0;
-    weight: number = 0;
-    abilities: any[] = [];
-    types: any[] = [];
-    stats: any[] = [];
+    id: any
+    name:  any
+    height: any
+    weight: any
+    abilities: any
+    types: any
+    stats: any
+    sprites: any
 }

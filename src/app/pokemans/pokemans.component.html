@@ -4,10 +4,12 @@
         <div>{{p.id}}</div>
         <div>{{p.weight}} lbs</div>
         <div *ngFor="let a of p.abilities">
-            <div>{{a.ability.name}}</div>
+            <div>{{a}}</div>
 
         </div>
-        <img src={p.sprites.front_default} />
+        <img src="{{p.sprites}}" />
+        <button (click)="
+        logSpecs(p)"></button>
         
     </div>
 
