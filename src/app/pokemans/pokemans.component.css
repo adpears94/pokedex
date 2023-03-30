@@ -4,10 +4,28 @@
     width: 100%;
     border: 1px solid black;
     justify-content: space-around;
+   
     /* align-items: center; */
 }
+.wrapper {
+    position: relative;
+  }
+.br {
+    position: relative;
+    z-index: 1;
+    background-color: #cccccc;
+    height: 94vh;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+.meat {
+    z-index: 50;
+    position: absolute;
+}
+
 .blue {
-    color: blue;
+   
     font-size: 200%;
     
 }
@@ -29,3 +47,7 @@
     justify-content: space-around;
     align-items: center
 }
+
+
+  
+ 

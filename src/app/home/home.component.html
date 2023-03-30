@@ -1,8 +1,10 @@
-<h1>{{title}}</h1>
-<div *ngFor="let p of pokemon" class="box">
-  <h2>
-    <a [routerLink]="['/pokemon', p.id]">{{p.name}}</a></h2>
-  <img src="{{p.sprite}}" />
-  
-</div>
+
+<div class="container">
+    <div [routerLink]="['/pokemon', p.id]" *ngFor="let p of pokemon" class="box">
+        <h2 >
+        {{p.name}}
+    </h2>
+        <img src="{{p.sprite}}" />
+    </div>
+  </div>
 <!-- remebmber to wrap this html in a wrapper div,section, nav, footer, etc so screen readers and your css is stable -->

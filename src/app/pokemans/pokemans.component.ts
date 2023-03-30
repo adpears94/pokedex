@@ -34,7 +34,9 @@ export class PokemansComponent {
       pokemonSpecs.abilities = pokemonSpecs.abilities.map((p: any) => {
         return p.ability.name;
       })
-      pokemonSpecs.sprites = pokemonSpecs.sprites.other.dream_world.front_default;
+      pokemonSpecs.sprites = pokemonSpecs.sprites.other.dream_world.
+      front_default;
+      this.sprites= pokemonSpecs.sprites
       pokemonSpecs.stats = pokemonSpecs.stats.map((p: any) => {
         return  {base_stat: p.base_stat, name: p.stat.name}
       })

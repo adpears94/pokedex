@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PokedexService } from './pokedex.service';
 import { HomeComponent } from './home/home.component';
 import { PokemansComponent } from './pokemans/pokemans.component';
+import { NavComponent } from './nav/nav.component';
 
 
 
@@ -15,7 +16,8 @@ import { PokemansComponent } from './pokemans/pokemans.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    PokemansComponent
+    PokemansComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
